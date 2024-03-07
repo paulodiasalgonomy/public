@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Algonomy Demo">
+    <link rel="icon" href="https://algonomy.com/wp-content/uploads/2020/11/favicon.png" sizes="192x192">
+    <link rel="icon" href="https://algonomy.com/wp-content/uploads/2020/11/favicon-75x75.png" sizes="32x32">
+    <meta property="og:description" content="Explore Algonomy's market-leading personalized solutions transforming customer experiences. Through innovative technologies and advanced analytics, we empower brands to deliver unique and relevant experiences, driving customer engagement and increasing conversions. Learn more about our tailored solutions and how we can help your company achieve exceptional results.">
+    <meta property="og:image" content="https://algonomy.com/wp-content/uploads/2023/01/algonomy-products-portfolioo1.png">
+    <meta property="og:url" content="https://algonomy.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="YAlgonomy">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"
+    integrity="sha256-eTyxS0rkjpLEo16uXTS0uVCS4815lc40K2iVpWDvdSY=" crossorigin="anonymous"></script>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <link  rel="stylesheet" type="text/css" href="style.css" />
+    <title>Demo Algonomy</title>
+</head>
+<body onLoad="javascript:profileCheck();""> 
+    <script src="https://media.richrelevance.com/rrserver/js/2.0/p13n.js"></script>
+    <script charset="utf-8" type="text/JavaScript" defer="defer">
+        function profileCheck(){
+            var profile  = localStorage.getItem('userId');
+            switch(profile) {
+                case "userProfileConstrucao":
+                    document.getElementById("profileConstrucao").selected = true;
+                break;
+                case "userProfileDecoracao":
+                    document.getElementById("profileDecoracao").selected = true;
+                break;
+                case "userProfileMoveis":
+                    document.getElementById("profileMoveis").selected = true;
+                break;
+                case "userProfileMoveisBanheiros":
+                    document.getElementById("profileMoveisBanheiro").selected = true;
+                break;
+                case "userProfileMoveisSala":
+                    document.getElementById("profileMoveisSala").selected = true;
+                break;
+                case "userProfileGdeSP":
+                    document.getElementById("profileGdeSP").selected = true;
+                break;
+                case "userProfileRJ":
+                    document.getElementById("profileRJ").selected = true;
+                break;
+                case "userFidelidade":
+                    document.getElementById("profileFidelidade").selected = true;
+                break;
+                default:
+                    document.getElementById("profileNovo").selected = true;
+            }
+        }
+
+
+
+
+
+        function refreshProfile(){
+            var profileSelected = document.getElementById("profiles").value || '';
+            switch(profileSelected) {
+                case "profileConstrucao":
+                    console.log("Selecionou Construção");
+                    localStorage.setItem('userId', "userProfileConstrucao");
+                    localStorage.setItem('sessionId', "sessionProfileConstrucao");
+                    localStorage.setItem('rr_rcs','');
+                    break;
+                case "profileDecoracao":
+                    console.log("Selecionou Decoração");
+                    localStorage.setItem('userId', "userProfileDecoracao");
+                    localStorage.setItem('sessionId', "sessionProfileDecoracao");
+                    localStorage.setItem('rr_rcs','');
+                    break;
+                case "profileMoveis":
+                    console.log("Selecionou Moveis");
+                    localStorage.setItem('userId', "userProfileMoveis");
+                    localStorage.setItem('sessionId', "sessionProfileMoveis");
+                    localStorage.setItem('rr_rcs','');
+                    break;
+                case "profileMoveisBanheiro":
+                    console.log("Selecionou Moveis Banheiro");
+                    localStorage.setItem('userId', "userProfileMoveisBanheiros");
+                    localStorage.setItem('sessionId', "sessionProfileMoveisBanheiros");
+                    localStorage.setItem('rr_rcs','');
+                    break;
+                case "profileMoveisSala":
+                    console.log("Selecionou Moveis Sala");
+                    localStorage.setItem('userId', "userProfileMoveisSala");
+                    localStorage.setItem('sessionId', "sessionProfileMoveisSala");
+                    localStorage.setItem('rr_rcs','');
+                    break;
+                case "profileGdeSP":
+                    console.log("Selecionou Gde SP");
+                    localStorage.setItem('userId', "userProfileGdeSP");
+                    localStorage.setItem('sessionId', "sessionProfileGdeSP");
+                    localStorage.setItem('rr_rcs','');
+                    break;
+                case "profileRJ":
+                    console.log("Selecionou Gde SP");
+                    localStorage.setItem('userId', "userProfileRJ");
+                    localStorage.setItem('sessionId', "sessionProfileRJ");
+                    localStorage.setItem('rr_rcs','');
+                    break;
+                    break;
+                case "profileFidelidade":
+                    console.log("Usuário Fidelidade");
+                    localStorage.setItem('userId', "userFidelidade");
+                    localStorage.setItem('sessionId', "sessionUserFidelidade");
+                    localStorage.setItem('rr_rcs','');
+                    break;
+                case "profileNovo":
+                    console.log("Selecionou Novo Usuário");
+                    let rand = (Math.random() + 1).toString(36).substring(7);
+                    localStorage.setItem('userId', "user-"+rand);
+                    localStorage.setItem('sessionId', "session-"+rand);
+                    localStorage.setItem('rr_rcs','');
+                    break;
+                default:
+                    console.log("Erro");
+            }
+            location.reload()
+        }
+        var R3_COMMON = new r3_common();
+        let rand = (Math.random() + 1).toString(36).substring(7);
+        var id_user = localStorage.getItem('userId') || "user-"+rand;
+        var id_sessao = localStorage.getItem('sessionId') || "session-"+rand;
+
+        
+        // adicionado o tratamento de ambiente pela URL
+        var rr_env = "recs";
+        if (window.location.href.indexOf("r3_env=integration") > -1) {
+            rr_env = "integration";
+        }       
+        
+        R3_COMMON.setApiKey('b585440a90ab9e49');
+        
+        // adicionado apiClientKey
+        R3_COMMON.apiClientKey = '82c59fb875e5bdcf';        
+        
+        // Alterado a base da url para receber o ambiente pelo parametro
+        R3_COMMON.setBaseUrl('https://'+rr_env+'.richrelevance.com/rrserver/');
+        
+        R3_COMMON.setSessionId(id_sessao); 
+        R3_COMMON.setUserId(id_user);  
+        if( localStorage.getItem('userId') == "userProfileGdeSP"){
+            R3_COMMON.setRegionId("grande_sao_paulo");  
+        }else if(localStorage.getItem('userId') == "userProfileRJ"){
+            R3_COMMON.setRegionId("rio_de_janeiro");  
+        }
+        R3_COMMON.addPlacementType('home_page.hero_01|home_page.hero_02|home_page.historico|home_page.mosaico_01|home_page.mosaico_02|home_page.mosaico_03|home_page.mosaico_04');
+        /* var R3_CATEGORY = new r3_category();         
+        R3_CATEGORY.setId('5fa987234acac32604690c0c'); 
+        R3_CATEGORY.setName('Acessórios');  */
+        
+        // Atribuido categoryId
+        /* R3_COMMON.categoryId = R3_CATEGORY.id; */
+        // Atribuido placement
+        R3_COMMON.placements = R3_COMMON.placementType;
+        // Atribuido url referer
+        R3_COMMON.pref = document.referrer;
+        // Chama o clientJs
+        
+        rr_flush_onload();
+        r3();
+        RR.jsonCallback = function(){
+            var arr = RR.data.JSON.placements;
+            var herosHTML = '<div class="owl-carousel">';
+            
+            var mosaicsHTML= '<div>';
+            console.log(arr);
+        
+            for (var i = 0; i < arr.length; i++){
+                console.log(arr[i]);
+                if(arr[i].placementType == "content"){
+                    // HEROS
+                    if((arr[i].content["AREA"] == 'HERO')){    
+                        herosHTML += `<a href="${arr[i].content["TARGET_URL"]}" title="Ir para ${arr[i].content["CONTENT_ALT"]}" class="item"> \n\t<img src="${arr[i].content["CONTENT_URL"]}"  alt="${arr[i].content["CONTENT_ALT"]}" />\n</a>\n`;
+                        
+                    // MOSAICS
+                    } else if((arr[i].content["AREA"] == 'MOSAICO')){ 
+                        mosaicsHTML += `<a href="${arr[i].content["TARGET_URL"]}" title="Ir para ${arr[i].content["CONTENT_ALT"]}">
+                                            <img src="${arr[i].content["CONTENT_URL"]}"  alt="${arr[i].content["CONTENT_ALT"]}" />
+                                        </a>`;
+                    }
+                } else {
+                    // PRODUTOS NOVIDADES                    
+                    if((arr[i].name == 'home_page.historico')){     
+                        // CRIA O HTML PARA CARROSSEL DE PRODUTOS
+                        var productsHTML = '<div class="carrossel-produtos">\
+                                                <h2>'+ arr[i].message +'</h2>\
+                                                <div id="recs" class="owl-carousel"  data-autoplay="false" data-nav="true" data-dots="false" data-loop="true" data-slidespeed="800" data-margin="30"  data-responsive = \'{"0":{"items":1}, "640":{"items":2}, "768":{"items":3}, "1024":{"items":6}, "1200":{"items":6}}\'>';
+        
+                        // Loop com os produtos retornados para esse placement
+                        $.each(arr[i].items, function(j, val){
+                            if(val.salePrice != ''){
+                                productsHTML += `<a class="sale-item" href="${val.linkURL}" title="Ir para ${val.name}"> <img src="${val.imageURL}" alt="Ir para ${val.name}"> <p class="productName">${val.name}</p><p class="oldPrice">De R$ ${val.price}</p><p class="newPrice">Por R$ ${val.salePrice}</p></a>`;
+                        } else {
+                                productsHTML += `<a class="regular-item" href="${val.linkURL}" title="Ir para ${val.name}"> <img src="${val.imageURL}" alt="Ir para ${val.name}"> <p class="productName">${val.name}</p><p class="newPrice"> R$ ${val.price}</p></a>`;
+                            }
+                        });
+                        productsHTML += '</div>';
+        
+                    }
+                } 
+            }
+            herosHTML += '</div>';
+            mosaicsHTML += '</div>';
+            
+            $("#heros").html(herosHTML);
+            $("#products").html(productsHTML);
+            $("#mosaic01").html(mosaicsHTML);
+            function initializeCarousel(){
+                $('#heros .owl-carousel').owlCarousel({
+                    margin: 0,
+                    nav: false,
+                    loop: true,
+                    autoplay: true,
+                    items: 1
+                });
+                $('#products .owl-carousel').owlCarousel({
+                    margin: 0,
+                    nav: false,
+                    loop: true,
+                    autoplay: true,
+                    items: 2
+                });
+            }
+            initializeCarousel();
+        };
+    </script>
+<div class="container">
+    <div class="phone">
+        <div class="notch-container">
+            <div class="notch"></div>
+        </div>
+        <div id="content">
+            <div id="header"><img src="./assets/header.png" alt=""/> </div>
+
+            <div id="heros">
+
+            </div>
+            <div id="products">
+
+            </div>
+
+            <div id="mosaic01"  >
+                <h2>Ofertas Para você</h2>
+            </div>
+
+            <div id="footer">
+                <p class="_0ima0 -wGoZ" style="--text-color: var(--colors-black); --text-weight: normal;">Considerada multiespecialista do lar, especializada em Construção, Acabamento, <a href="https://www.leroymerlin.com.br/decoracao" title="Decoração para casa">Decoração</a>, Jardinagem e <a href="https://www.leroymerlin.com.br/blog/bricolagem" title="Faça você mesmo">Bricolagem </a>, a Leroy Merlin apresenta aos seus Clientes a maior variedade de produtos, são mais de 100 mil itens divididos em diversos departamentos. Aqui, você encontra <a href="https://www.leroymerlin.com.br/materiais-de-construcao" title="Materiais de Construção">Materiais de Construção</a>, <a href="https://www.leroymerlin.com.br/cozinhas-planejadas" title="Cozinhas Planejadas">Cozinhas Planejadas</a>, <a href="https://www.leroymerlin.com.br/ferramentas" title="Ferramentas gerais">Ferramentas</a>, <a href="https://www.leroymerlin.com.br/furadeiras" title="Furadeiras">Furadeiras</a>, <a href="https://www.leroymerlin.com.br/pisos-e-revestimentos" title="Pisos e Revestimentos">Pisos e Revestimentos</a>, Sanitários, Encanamentos, <a href="https://www.leroymerlin.com.br/tapetes-tapetes" title="Tapetes">Tapetes</a>, Almofadas, Iluminação, <a href="https://www.leroymerlin.com.br/moveis" title="Móveis">Móveis</a>, <a href="https://www.leroymerlin.com.br/eletrodomesticos" title="Eletrodomésticos">Eletrodomésticos</a>, <a href="https://www.leroymerlin.com.br/tintas" title="Tintas">Tintas</a>, Ferragens, <a href="https://www.leroymerlin.com.br/ar-condicionado" title="Ar condicionado">Ar Condicionado</a>, produtos de <a href="https://www.leroymerlin.com.br/cama-mesa-e-banho" title="Cama, Mesa e Banho">cama, mesa e banho</a> e muito mais. As Lojas oferecem serviços diferenciados, como Cursos de Bricolagem, Corte de Madeira, Fábrica de Cores, Molduraria, Estacionamento, Café, Entrega em Domicílio, Troca de Mercadoria, Coleta Seletiva, Fraldário, Soluções Financeiras, entre outros. Hoje, a Leroy Merlin Brasil possui 47 <a href="https://www.leroymerlin.com.br/lojas" title="Lojas Leroy Merlin">Lojas</a> distribuídas em 11 estados brasileiros e o Distrito Federal. Não tenha dúvidas: a Leroy Merlin pode ajudar você em todas as etapas de sua obra. Navegue pelo site da empresa e conheça um pouco mais a companhia, seus departamentos e produtos, além das diversas Ofertas disponíveis. Seja bem vindo à casa da sua casa!</p><p class="_0ima0 -wGoZ" style="--text-color: var(--colors-gray-600); --text-weight: normal;">Copyright © 2021 Leroy Merlin, todos os direitos reservados. Leroy Merlin Cia Brasileira de Bricolagem. Inscrição estadual nº 298.176.665.115 CNPJ/MF sob o nº 01.438.784/0048-60. Rua Pascoal Pais, nº 525, 5º andar - Vila Cordeiro, CEP 04581-060, São Paulo/SP.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="wave">
+    <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+    viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+    <defs>
+    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+    </defs>
+    <g class="parallax">
+    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+    <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+    </g>
+    </svg>
+</div>
+<div id="controlPanelRight">
+    <select name="profiles" id="profiles" onChange="refreshProfile();">
+        <option value="">Selecione um perfil</option>
+        <hr />
+        <optgroup label="Categorias">
+            <option value="profileConstrucao" id="profileConstrucao">Construção</option>
+            <option value="profileDecoracao" id="profileDecoracao" >Decoração</option>
+            <option value="profileMoveis" id="profileMoveis">Móveis</option>
+            <option value="profileMoveisBanheiro" id="profileMoveisBanheiro">Móveis de Banheiro</option>
+            <option value="profileMoveisSala" id="profileMoveisSala">Móveis de Sala</option>
+        </optgroup>
+        <hr />
+        <optgroup label="Região">
+            <option value="profileGdeSP" id="profileGdeSP">Grande São Paulo</option>
+            <option value="profileRJ" id="profileRJ">Rio de Janeiro</option>
+        </optgroup>
+        <hr />
+        <hr />
+        <optgroup label="Atributos de Usuário">
+            <option value="profileFidelidade" id="profileFidelidade">Usuário Fidelidade</option>
+        </optgroup>
+        <hr />
+        <optgroup label="Outros">
+            <option value="profileNovo">Novo Usuário</option>
+        </optgroup>
+</div>
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+
+
+</body>
+</html>
