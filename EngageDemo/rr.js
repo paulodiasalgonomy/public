@@ -33,56 +33,47 @@ switch(profile) {
         var profileSelected = document.getElementById("profiles").value || '';
         switch(profileSelected) {
             case "profileConstrucao":
-                console.log("Selecionou Construção");
                 localStorage.setItem('userId', "userProfileConstrucao");
                 localStorage.setItem('sessionId', "sessionProfileConstrucao");
                 localStorage.setItem('rr_rcs','');
                 break;
             case "profileDecoracao":
-                console.log("Selecionou Decoração");
                 localStorage.setItem('userId', "userProfileDecoracao");
                 localStorage.setItem('sessionId', "sessionProfileDecoracao");
                 localStorage.setItem('rr_rcs','');
                 break;
             case "profileMoveis":
-                console.log("Selecionou Moveis");
                 localStorage.setItem('userId', "userProfileMoveis");
                 localStorage.setItem('sessionId', "sessionProfileMoveis");
                 localStorage.setItem('rr_rcs','');
                 break;
             case "profileMoveisBanheiro":
-                console.log("Selecionou Moveis Banheiro");
                 localStorage.setItem('userId', "userProfileMoveisBanheiros");
                 localStorage.setItem('sessionId', "sessionProfileMoveisBanheiros");
                 localStorage.setItem('rr_rcs','');
                 break;
             case "profileMoveisSala":
-                console.log("Selecionou Moveis Sala");
                 localStorage.setItem('userId', "userProfileMoveisSala");
                 localStorage.setItem('sessionId', "sessionProfileMoveisSala");
                 localStorage.setItem('rr_rcs','');
                 break;
             case "profileGdeSP":
-                console.log("Selecionou Gde SP");
                 localStorage.setItem('userId', "userProfileGdeSP");
                 localStorage.setItem('sessionId', "sessionProfileGdeSP");
                 localStorage.setItem('rr_rcs','');
                 break;
             case "profileRJ":
-                console.log("Selecionou Gde SP");
                 localStorage.setItem('userId', "userProfileRJ");
                 localStorage.setItem('sessionId', "sessionProfileRJ");
                 localStorage.setItem('rr_rcs','');
                 break;
                 break;
             case "profileFidelidade":
-                console.log("Usuário Fidelidade");
                 localStorage.setItem('userId', "userFidelidade");
                 localStorage.setItem('sessionId', "sessionUserFidelidade");
                 localStorage.setItem('rr_rcs','');
                 break;
             case "profileNovo":
-                console.log("Selecionou Novo Usuário");
                 let rand = (Math.random() + 1).toString(36).substring(7);
                 localStorage.setItem('userId', "user-"+rand);
                 localStorage.setItem('sessionId', "session-"+rand);
